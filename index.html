@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painted Mountain Farms</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .top-bar {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    .main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #82896E; /* Olive green background */
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff; /* White text color for contrast */
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #fff; /* White text for nav links */
+      font-weight: 600;
+    }
+
+    .main-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dropdown menu styles */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #7B4B36;
+      padding: 0.75rem 1rem;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f3ede6;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .header-tools {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #f5f1ec;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 1rem;
+      color: #333;
+      width: 120px;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 0.5rem;
+    }
+
+    .cart-icon .icon {
+      margin-right: 0;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #7B4B36;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .collections {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .collection {
+      background-color: #fff;
+      border: 2px solid #82896E;
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: 250px;
+      text-align: center;
+    }
+
+    .collection h3 a {
+      color: #7B4B36;
+      text-decoration: none;
+    }
+
+    .collection h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .shop-button {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background-color: #7B4B36;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .shop-button:hover {
+      background-color: #5e3627;
+    }
+
+    .why-handmade {
+      background-color: #fff;
+      margin: 3rem auto;
+      padding: 2rem;
+      max-width: 800px;
+      border-radius: 8px;
+      border: 2px solid #82896E;
+      text-align: center;
+    }
+
+    .why-handmade h2 {
+      color: #7B4B36;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #7B4B36;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .legal-links {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #888;
+      background-color: #f8f8f8;
+      padding: 1rem;
+    }
+
+    .legal-links a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    .legal-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    Free Shipping on Orders $50+
+  </div>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="logo">Painted Mountain Farms</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="shop.html">Shop</a>
+        <div class="dropdown-content">
+          <a href="shop.html">Shop All</a>
+          <a href="rosaries.html">Rosaries</a>
+          <a href="bracelets.html">Bracelets</a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+      <a href="checkout.html" class="cart-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 18 18" fill="none">
+          <path d="M6.75 16.5a.75.75 0 100-1.5.75.75 0 000 1.5zM13.5 16.5a.75.75 0 100-1.5.75.75 0 000 1.5zM1.5 1.5h2.25l2.1 9.765a.75.75 0 00.735.585h7.725a.75.75 0 00.735-.555L17.1 4.5H4.05" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Rooted in Faith. Crafted by Hand.</h1>
+  </section>
+
+  <!-- COLLECTIONS SECTION -->
+  <section class="collections">
+    <div class="collection">
+      <h3><a href="rosaries.html">Rosaries</a></h3>
+    </div>
+    <div class="collection">
+      <h3><a href="bracelets.html">Bracelets</a></h3>
+    </div>
+  </section>
+
+  <a class="shop-button" href="shop.html">Shop Now</a>
+
+  <!-- WHY HANDMADE SECTION -->
+  <section class="why-handmade">
+    <h2>Why Buy Handmade?</h2>
+    <p>At Painted Mountain Farms, every item is thoughtfully handcrafted to be as unique as the person who wears it. We believe in creating high-quality, meaningful pieces that are made to last a lifetime. Each rosary and bracelet is carefully crafted with love, detail, and intention.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Painted Mountain Farms. All rights reserved.</p>
+  </footer>
+
+  <div class="legal-links">
+    <a href="terms.html">Terms of Service</a> &nbsp;|&nbsp;
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+
+</body>
+</html>
