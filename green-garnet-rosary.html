@@ -12,11 +12,132 @@
       color: #333;
     }
 
+    .top-bar {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    .main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #82896E;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .main-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #7B4B36;
+      padding: 0.75rem 1rem;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f3ede6;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .header-tools {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #f5f1ec;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 1rem;
+      color: #333;
+      width: 120px;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 0.5rem;
+    }
+
+    .cart-icon .icon {
+      margin-right: 0;
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin: 1rem auto 0;
+      max-width: 1200px;
+      padding: 0 20px;
+      color: #7B4B36;
+    }
+
+    .breadcrumb a {
+      color: #7B4B36;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
     .container {
       display: flex;
       flex-wrap: wrap;
       max-width: 1200px;
-      margin: 40px auto;
+      margin: 20px auto;
       padding: 20px;
     }
 
@@ -79,13 +200,29 @@
       cursor: not-allowed;
     }
 
-    .back-link {
-      display: block;
+    footer {
+      background-color: #7B4B36;
+      color: #fff;
+      padding: 1rem;
       text-align: center;
-      margin-top: 2rem;
-      color: #7B4B36;
+      margin-top: 3rem;
+    }
+
+    .legal-links {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #888;
+      background-color: #f8f8f8;
+      padding: 1rem;
+    }
+
+    .legal-links a {
+      color: #888;
       text-decoration: none;
-      font-weight: bold;
+    }
+
+    .legal-links a:hover {
+      text-decoration: underline;
     }
   </style>
   <script>
@@ -95,6 +232,44 @@
   </script>
 </head>
 <body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">Free Shipping on Orders $50+</div>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="logo">Painted Mountain Farms</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="shop.html">Shop</a>
+        <div class="dropdown-content">
+          <a href="shop.html">Shop All</a>
+          <a href="rosaries.html">Rosaries</a>
+          <a href="bracelets.html">Bracelets</a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+      <a href="checkout.html" class="cart-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 18 18" fill="none">
+          <path d="M6.75 16.5a.75.75 0 100-1.5.75.75 0 000 1.5zM13.5 16.5a.75.75 0 100-1.5.75.75 0 000 1.5zM1.5 1.5h2.25l2.1 9.765a.75.75 0 00.735.585h7.725a.75.75 0 00.735-.555L17.1 4.5H4.05" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="shop.html">Shop</a> / <a href="rosaries.html">Rosaries</a>
+  </div>
+
+  <!-- PRODUCT LAYOUT -->
   <div class="container">
     <div class="thumbnails">
       <img src="https://raw.githubusercontent.com/cayden49/Painted-Mountain-Farms-Website/main/Green%20Garnet%20Rosary%20(Cover%20Image).JPG" onclick="swapImage(this.src)">
@@ -116,8 +291,18 @@
         Hand-strung with care, this rosary features genuine Green Garnet Tsavorite gemstone, hand-carved bronze-toned mother of pearl rose accents, and brown hessonite garnet spacer gemstones. The double-sided center piece and crucifix are both solid sterling silver, and each rose is intricately carved on both sides.
       </p>
       <button disabled>Sold Out</button>
-      <a href="rosaries.html" class="back-link">← Back to Rosaries</a>
     </div>
   </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Painted Mountain Farms. All rights reserved.</p>
+  </footer>
+
+  <div class="legal-links">
+    <a href="terms.html">Terms of Service</a> &nbsp;|&nbsp;
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+
 </body>
 </html>
