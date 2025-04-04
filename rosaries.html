@@ -130,33 +130,36 @@
       font-size: 1.2rem;
     }
 
-    .collections {
-      padding: 2rem;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
     }
 
-    .collection {
-      background-color: #fff;
-      border: 2px solid #82896E;
-      border-radius: 8px;
-      padding: 1.5rem;
-      width: 300px;
+    .product {
       text-align: center;
     }
 
-    .collection img {
+    .product a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product img {
       width: 100%;
       border-radius: 8px;
       border: 2px solid #82896E;
+      object-fit: cover;
     }
 
-    .collection h3 {
-      color: #7B4B36;
-      margin-top: 0.75rem;
+    .product-name {
       font-size: 1rem;
+      margin-top: 0.75rem;
+      color: #7B4B36;
+      font-weight: 600;
     }
 
     footer {
@@ -182,19 +185,12 @@
     .legal-links a:hover {
       text-decoration: underline;
     }
-
-    .active {
-      font-weight: bold;
-      color: #7B4B36;
-    }
   </style>
 </head>
 <body>
 
   <!-- TOP BAR -->
-  <div class="top-bar">
-    Free Shipping on Orders $50+
-  </div>
+  <div class="top-bar">Free Shipping on Orders $50+</div>
 
   <!-- HEADER -->
   <header class="main-header">
@@ -202,10 +198,10 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <div class="dropdown">
-        <a href="shop.html" class="dropdown-btn">Shop</a>
+        <a href="shop.html">Shop</a>
         <div class="dropdown-content">
-          <a href="rosaries.html" class="dropdown-link active">Rosaries</a>
-          <a href="bracelets.html" class="dropdown-link">Bracelets</a>
+          <a href="rosaries.html">Rosaries</a>
+          <a href="bracelets.html">Bracelets</a>
         </div>
       </div>
       <a href="about.html">About</a>
@@ -229,14 +225,15 @@
     <p>Our rosaries are handcrafted with love and care, designed to support your faith journey.</p>
   </section>
 
-  <!-- COLLECTIONS SECTION -->
-  <section class="collections">
-    <div class="collection">
+  <!-- PRODUCT GRID -->
+  <section class="product-grid">
+    <div class="product">
       <a href="green-garnet-rosary.html">
         <img src="https://raw.githubusercontent.com/cayden49/Painted-Mountain-Farms-Website/main/Green%20Garnet%20Rosary%20(Cover%20Image).JPG" alt="Green Garnet Sterling Silver Rosary">
+        <div class="product-name">Green Garnet Sterling Silver Rosary</div>
       </a>
-      <h3>Green Garnet Sterling Silver Rosary</h3>
     </div>
+    <!-- Add more rosaries here -->
   </section>
 
   <!-- FOOTER -->
